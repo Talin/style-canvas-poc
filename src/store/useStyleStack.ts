@@ -1,4 +1,4 @@
-import create from 'zustand';
+import { create } from 'zustand';
 
 type Palette = { primary: string[]; neutrals: string[] };
 
