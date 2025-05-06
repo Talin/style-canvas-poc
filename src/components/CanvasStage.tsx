@@ -4,7 +4,8 @@ import { useStyleStack } from '../store/useStyleStack';
 
 export default function CanvasStage() {
   const palette = useStyleStack((s) => s.palette);
-  const defaultFill = palette?.primary?.[0] ?? '#cccccc';
+  const activeFill = useStyleStack((s) => s.activeFill);
+  const defaultFill = activeFill ?? palette?.primary?.[0] ?? '#cccccc';
 
   const [shapes, setShapes] = useState<
     { id: string; type: 'rect' | 'text'; x: number; y: number }[]
