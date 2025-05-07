@@ -1,6 +1,6 @@
 import { useStyleStack } from '../store/useStyleStack';
 
-export function PaletteBar() {
+export default function PaletteBar() {
   const palette = useStyleStack((s) => s.palette);
   const activeFill = useStyleStack((s) => s.activeFill);
   const setActiveFill = useStyleStack((s) => s.setActiveFill);
